@@ -1,16 +1,23 @@
 import React from "react";
+import "bootstrap/dist/css/bootstrap.min.css";
 import "./Weather.css";
 
 export default function Weather() {
   return (
     <div className="Weather">
       <form>
-        <input
-          type="Search"
-          placeholder="Enter a City..."
-          className="form-control"
-        />
-        <input type="Submit" value="Search" className="btn btn-primary" />
+        <div className="row">
+          <div className="col-9">
+            <input
+              type="Search"
+              placeholder="Enter a City..."
+              className="form-control"
+            />
+          </div>
+          <div className="col-3">
+            <input type="Submit" value="Search" className="btn btn-primary" />
+          </div>
+        </div>
       </form>
       <h1>New York</h1>
       <ul>
@@ -18,7 +25,7 @@ export default function Weather() {
         <li>Mostly Cloudy</li>
       </ul>
       <div className="row">
-        <div className="col-9">
+        <div className="col-6">
           <img
             src="https://ssl.gstatic.com/onebox/weather/64/sunny.png"
             alt="Mostly Sunny"
